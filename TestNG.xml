@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression" parallel="tests" thread-count="2" verbose="5">
+	<test name="test1" preserve-order="true">
+		<parameter name="wda" value="8100"/>
+		<parameter name="iDevice" value="iPhone 6"/>
+		<parameter name="UDID" value="84023d2acf8b247deef1688272330a87505c8057"/>
+		<parameter name="pfv" value="11.0.3"/>
+		<parameter name="port" value="4725"/>
+		<parameter name="NCT" value="120"/>
+		<classes>
+			<class name="tests.TestCases">
+			</class>
+		</classes>
+	</test>
+	
+	<test name="test2" preserve-order="true">
+		<parameter name="wda" value="8101"/>
+		<parameter name="iDevice" value="iPhone 6S"/>
+		<parameter name="UDID" value="e54d3e54434e2b826a21beeb6bba7664107103e8"/>
+		<parameter name="pfv" value="10.3"/>
+		<parameter name="port" value="4724"/>
+		<parameter name="NCT" value="120"/>
+		<classes>
+			<class name="tests.TestCases">
+			</class>
+		</classes>
+	</test>
+
+
+</suite> <!-- Suite -->

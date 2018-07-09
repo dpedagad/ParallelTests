@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Regression]" guice-stage="DEVELOPMENT" verbose="5">
+  <test thread-count="2" parallel="tests" name="test1(failed)" verbose="5">
+    <parameter name="iDevice" value="iPhone 6"/>
+    <parameter name="pfv" value="11.0.3"/>
+    <parameter name="wda" value="8100"/>
+    <parameter name="port" value="4725"/>
+    <parameter name="UDID" value="84023d2acf8b247deef1688272330a87505c8057"/>
+    <parameter name="NCT" value="120"/>
+    <classes>
+      <class name="tests.TestCases">
+        <methods>
+          <include name="setUP"/>
+          <include name="tearDown"/>
+          <include name="Run"/>
+        </methods>
+      </class> <!-- tests.TestCases -->
+    </classes>
+  </test> <!-- test1(failed) -->
+</suite> <!-- Failed suite [Regression] -->
