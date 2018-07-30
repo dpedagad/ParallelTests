@@ -25,16 +25,11 @@ protected IOSDriver<IOSElement> driver = null;
 		DesiredCapabilities caps = new DesiredCapabilities();
 		 service = new AppiumServiceBuilder().usingPort(Integer.valueOf(port)).build();
 		service.start();
+		System.out.println("Appium server started");
 		
 		if (service==null || !service.isRunning()) {
 			throw new AppiumServerHasNotBeenStartedLocallyException("An Appium server node is not started");
 		}
-//		
-//		if (!WDAServer.getInstance().isRunning()) {
-//		       WDAServer.getInstance().restart();
-//		   }
-		
-		//String url = "http://127.0.0.1:4723/wd/hub";
 		
 //		File app = new File(pathname = "/Users/pmasur/Downloads/Abercrombie.ipa");
 		
@@ -49,6 +44,7 @@ protected IOSDriver<IOSElement> driver = null;
 		caps.setCapability("newCommandTimeout",NCT);
 		caps.setCapability("showXcodeLog", true);
 		caps.setCapability(IOSMobileCapabilityType.WDA_LOCAL_PORT, wda);
+		//caps.setCapability(webK, value);
 		caps.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT	, 5000);
 		//caps.setCapability("app", "/Users/pmasur/Downloads/Abercrombie.ipa");
 		caps.setCapability("udid", UDID);
